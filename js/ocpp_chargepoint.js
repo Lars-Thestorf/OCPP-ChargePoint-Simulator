@@ -7,12 +7,12 @@ import * as ocpp from './ocpp_constants.js'
 //
 //
 function formatDate(date) {
-    var day = String(date.getDate()),
-        monthIndex = String(date.getMonth() + 1),
-        year = date.getFullYear(),
-        h = date.getHours(),
-        m = String(date.getMinutes()),
-        s = String(date.getSeconds());
+    var day = String(date.getUTCDate()),
+        monthIndex = String(date.getUTCMonth() + 1),
+        year = date.getUTCFullYear(),
+        h = String(date.getUTCHours()),
+        m = String(date.getUTCMinutes()),
+        s = String(date.getUTCSeconds());
 
     if (day.length < 2) {
         day = ('0' + day.slice(-2));
