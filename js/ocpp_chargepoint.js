@@ -400,7 +400,7 @@ export default class ChargePoint {
         if (this._heartbeat) {
             clearInterval(this._heartbeat);
         }
-        this._heartbeat = setInterval(this.sendHeartbeat,period*1000);
+        this._heartbeat = setInterval(this.sendHeartbeat.bind(this),period*1000);
     }
 
     //
